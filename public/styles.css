@@ -150,43 +150,15 @@ h3 {
   }
   /* likes and unlikes */
   .likes-section {
-    margin-top: 20px;    /* Space above likes section */
-    display: flex;        /* Use flexbox for alignment */
-    align-items: center;  /* Vertically center items */
-    gap: 10px;           /* Space between items */
+    margin-top: 20px;    
+    display: flex;       
+    align-items: center; 
+    float: right; 
+    gap: 10px;           
   }
   
-  .like-button,
-  .unlike-button {
-    padding: 8px 16px;               /* Padding for buttons */
-    font-size: 1em;                  /* Font size for buttons */
-    border: none;                    /* Remove default border */
-    border-radius: 5px;              /* Rounded corners */
-    cursor: pointer;                 /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
-  }
-  
-  /* Styling for the like button */
-  .like-button {
-    background-color: #8d6dc4;       /* Background color */
-    color: #fff;                     /* Text color */
-  }
-  
-  .like-button:hover {
-    background-color: #7d5b9a;       /* Darker shade on hover */
-  }
-  
-  /* Styling for the unlike button */
-  .unlike-button {
-    background-color: #e91e63;       /* Background color */
-    color: #fff;                     /* Text color */
-  }
-  
-  .unlike-button:hover {
-    background-color: #d81b60;       /* Darker shade on hover */
-  }
-  
-  /* Styling for the likes count */
+
+ 
   .like-count {
     font-weight: bold;               /* Bold text for the count */
   }
@@ -231,19 +203,22 @@ h3 {
 }
 
 .like-toggle-button {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: background-color 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
-.like-toggle-button:hover {
-    background-color: #45a049;
+.like-toggle-button i {
+  font-size: 24px;
+  color: white; /* Default unliked color */
+  transition: color 0.3s ease;
 }
+
+.like-toggle-button i.liked {
+  color: red; /* Liked color */
+}
+
 
 /* Like count styles */
 .like-count {
