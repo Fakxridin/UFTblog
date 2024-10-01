@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+/* Global Styles */
+/* Global Styles */
+body {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-family: 'Playfair Display', serif;
+  background-image: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
+}
+
+p, h1, h2, h3, a, ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+nav li {
+  list-style-type: none;
+  margin-left: 20px;
+  position: relative;
+}
+
+nav li::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #8d6dc4;
+  transition: width 0.3s ease-in-out;
+}
+
+nav li:hover::after {
+  width: 100%;
+}
+
+nav h1 {
+  font-size: 3em;
+  background: linear-gradient(to right, #8d6dc4, #e91e63);
+  background-clip: text;
+  color: transparent;
+}
+
+nav p {
+  color: #777;
+  font-weight: 300;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+nav a {
+ 
+  color: rgb(201, 126, 12);
+}
+
+/* Footer Styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #777;
+  text-align: center;
+  margin-top: 80px;
+  padding: 20px 0;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #f0f0f0;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.create-blog {
+  margin-bottom: 100px;
+}
+
+/* Content Styles */
+h2 {
+  margin-bottom: 40px;
+  font-size: 2.2em;
+  color: #8d6dc4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  text-transform: capitalize;
+  margin-bottom: 8px;
+  font-size: 1.6em;
+  color: #e91e63;
+}
+
+.content {
+  margin-left: 20px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Index Page Styles */
+.blogs a {
+  display: block;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 6px solid #8d6dc4;
+  transition: transform 0.3s ease-in-out;
+}
+
+.blogs a:hover {
+  transform: translateX(10px);
+}
+
+.blogs a:hover h3 {
+  color: #c2185b;}
+  .delete {
+    float: right; /* Float delete button to the right */
+    background: none; /* Remove default background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Show pointer cursor */
+    margin-top: 19px;
+    
+  }
+  
+  .delete img {
+    width: 30px; /* Set the width of the delete icon */
+    height: auto; /* Keep aspect ratio */
+    transition: transform 0.2s; /* Animate on hover */
+  }
+  
+  .delete img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  /* likes and unlikes */
+  .likes-section {
+    margin-top: 20px;    /* Space above likes section */
+    display: flex;        /* Use flexbox for alignment */
+    align-items: center;  /* Vertically center items */
+    gap: 10px;           /* Space between items */
+  }
+  
+  .like-button,
+  .unlike-button {
+    padding: 8px 16px;               /* Padding for buttons */
+    font-size: 1em;                  /* Font size for buttons */
+    border: none;                    /* Remove default border */
+    border-radius: 5px;              /* Rounded corners */
+    cursor: pointer;                 /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  }
+  
+  /* Styling for the like button */
+  .like-button {
+    background-color: #8d6dc4;       /* Background color */
+    color: #fff;                     /* Text color */
+  }
+  
+  .like-button:hover {
+    background-color: #7d5b9a;       /* Darker shade on hover */
+  }
+  
+  /* Styling for the unlike button */
+  .unlike-button {
+    background-color: #e91e63;       /* Background color */
+    color: #fff;                     /* Text color */
+  }
+  
+  .unlike-button:hover {
+    background-color: #d81b60;       /* Darker shade on hover */
+  }
+  
+  /* Styling for the likes count */
+  .like-count {
+    font-weight: bold;               /* Bold text for the count */
+  }
+  
+  /* Optional: Style for the liked by section */
+  .likes-section p {
+    margin: 0;                      /* Remove margin */
+    font-size: 0.9em;               /* Smaller font size */
+    color: #777;                    /* Light color for the text */
+  }
+  .details {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   
+}
+
+/* Title styles */
+.details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Created-at date styles */
+.created-at {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+/* Delete button styles */
+
+
+
+
+/* Likes section styles */
+.likes-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.like-toggle-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.like-toggle-button:hover {
+    background-color: #45a049;
+}
+
+/* Like count styles */
+.like-count {
+    font-weight: bold;
+}
+
+
+
+/* Error message styles */
+.error-message {
+    margin-top: 15px;
+    color: red;
+    display: block;
+    font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .details {
+        padding: 15px;
+    }
+    
+    .details h2 {
+        font-size: 20px;
+    }
+
+    button.delete,
+    .like-toggle-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

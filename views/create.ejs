@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <style>
+    /* ... (previous CSS styles) ... */
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #8d6dc4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-input,
+.form-textarea {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #8d6dc4;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8d6dc4;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form-button:hover {
+  background-color: #c2185b;
+}
+
+.button-text {
+  margin-right: 10px;
+}
+
+.button-icon {
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  </style>
+<body>
+  <%- include('./partials/nav.ejs') %>
+    <div class="create-blog content">
+      <div class="form-container">
+        <h2>Create a New Blog</h2>
+        <form action="/blogs" method="post" class="form-card">
+          <div class="form-field">
+            <label for="title" class="form-label">Blog Title</label>
+            <input type="text" id="title" name="title" required class="form-input">
+          </div>
+          <div class="form-field">
+            <label for="snippet" class="form-label">Blog Snippet</label>
+            <input type="text" id="snippet" name="snippet" required class="form-input">
+          </div>
+          <div class="form-field">
+            <label for="body" class="form-label">Blog Body</label>
+            <textarea id="body" name="body" required class="form-textarea"></textarea>
+          </div>
+          <button type="submit" class="form-button">
+            <span class="button-text">Submit</span>
+            <span class="button-icon">&#10132;</span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
